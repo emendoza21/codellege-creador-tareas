@@ -1,27 +1,159 @@
+.App {
+  background: rgb(30, 81, 205);
+  background: linear-gradient(
+    0deg,
+    rgba(30, 81, 205, 1) 0%,
+    rgba(13, 222, 195, 1) 100%
+  );
+}
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  width: 300px;
+  width: 250px;
   background-color: white;
+  border-style: solid;
+  border-right-color: rgb(83, 83, 83);
+  border-bottom-color: rgb(105, 104, 104);
+  border-left-color: white;
+  border-top-color: white;
   margin: 10px;
+  position: relative;
+  height: 350px;
 }
 
 .card_image {
   width: 100%;
+  height: 180px;
+  object-fit: cover;
 }
 
 .card_info {
-  padding: 20px;
+  padding: 11px;
+  padding-top: 6px;
 }
 
 .card h1 {
   font-size: 19px;
+  font-family: cursive;
 }
 
 .card h6 {
   font-size: 15px;
   margin: 10px auto;
+  font-family: cursive;
+}
+
+.card h5 {
+  font-size: 11px;
+  margin: 10px auto;
+  font-family: cursive;
+}
+
+.card p {
+  font-family: cursive;
+}
+
+.card .likes_button {
+  background-color: #1393ec;
+  color: white;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  outline: none;
+  cursor: pointer;
+  font-family: cursive;
+}
+
+.form {
+  background-color: white;
+  width: 500px;
+  margin: 10px;
+  padding: 20px 25px;
+  color: white;
+  font-family: cursive;
+  box-shadow: 3px 3px 3px 3px rgb(168, 164, 164);
+}
+
+.form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form input,
+.form select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  font-family: cursive;
+}
+
+.form .submit {
+  width: 100px;
+  margin-top: 20px;
+  background: #1393ec;
+  border-color: white;
+  font-size: 15px;
+  color: white;
+  font-family: cursive;
+  height: 40px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 101%;
+  height: 150px;
+  margin-top: 5px;
+}
+
+.mensaje {
+  border-radius: 5px;
+  width: 101%;
+  height: 33px;
+  text-align: left;
+  padding-top: 8px;
+  padding-left: 8px;
+  background-color: rgb(83, 81, 81);
+  color: white;
+}
+
+.form_obras {
+  background-color: white;
+  width: 500px;
+  margin: 10px;
+  padding: 20px 25px;
+  box-shadow: 3px 3px 3px 3px rgb(168, 164, 164);
+}
+
+.form_obras label {
+  display: block;
+  margin-top: 10px;
+}
+
+.form_obras input,
+.form select {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.form_obras .submit {
+  width: 100%;
+  margin-top: 20px;
+  background: #1393ec;
+  border-color: white;
+  font-size: 15px;
+  color: white;
+  font-family: cursive;
+  height: 40px;
+  border-radius: 5px;
 }
