@@ -58,10 +58,130 @@ function App() {
       <div className="container">
         <Form />
         <Obras />
+
         {data.map((item, i) => {
           return <ArtCard {...item} key={item.title + i} />;
         })}
+        <Abuelo pension={8000}></Abuelo>
       </div>
+    </div>
+  );
+}
+
+//lista
+// class App extends React.Component {
+//   constructor() {
+//     super();
+//     this.state = {
+//       task: "",
+//       list: [],
+//     };
+//   }
+
+//   handleChange = (event) => {
+//     const { name, value } = event.target;
+//     this.setState({ [name]: value });
+//   };
+
+//   handleSubmit = (event) => {
+//     event.preventDefault();
+//     const newList = [...this.state.list, this.state.task];
+//     this.setState({ task: "", list: newList });
+//     alert("Se ha guardado tu tarea");
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <Form
+//           value={this.state.task}
+//           onChange={this.handleChange}
+//           onSubmit={this.handleSubmit}
+//         />
+//         <List items={this.state.list} />
+//       </div>
+//     );
+//   }
+// }
+
+// function List(props) {
+//   return (
+//     <ul>
+//       {props.items.map((item) => {
+//         return <li key={item}>{item}</li>;
+//       })}
+//     </ul>
+//   );
+// }
+
+// function Form(props) {
+//   return (
+//     <div>
+//       <form onSubmit={props.onSubmit}>
+//         <h1>¿En qué estarás trabajando hoy?</h1>
+//         <input
+//           type="text"
+//           name="task"
+//           value={props.value}
+//           onChange={props.onChange}
+//         />
+//         <button>Guardar</button>
+//       </form>
+//     </div>
+//   );
+// }
+// lista;
+
+//Herencia props
+
+// function Abuelo(props) {
+//   return (
+//     <div>
+//       <Padre sueldo={props.sueldo} />
+//       <h1>Pension abuelo : {props.sueldo} pesos</h1>
+//     </div>
+//   );
+// }
+
+// function Padre(props) {
+//   return (
+//     <div>
+//       <Hijo regalo={props.sueldo} />
+//       <h1>sueldo padre: {props.regalo / 2} pesos</h1>
+//     </div>
+//   );
+// }
+
+// function Hijo(props) {
+//   return (
+//     <div>
+//       <h1>Regalo hijo {props.regalo / 4} pesos</h1>
+//     </div>
+//   );
+// }
+
+function Abuelo(props) {
+  return (
+    <div>
+      <Padre sueldo={props.pension / 2} />
+      <h1></h1>
+    </div>
+  );
+}
+
+function Padre(props) {
+  return (
+    <div>
+      <Hijo regalo={props.sueldo / 4} />
+      <h1></h1>
+    </div>
+  );
+}
+
+function Hijo(props) {
+  return (
+    <div>
+      <h1>Regalo hijo {props.regalo} pesos</h1>
     </div>
   );
 }
